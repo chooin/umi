@@ -292,10 +292,7 @@ Verify commit message information, usually used in conjunction with [husky](http
 For example, configure the following in `.husky/commit-msg`,
 
 ```bash
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-npx --no-install umi verify-commit $1
+npx --no -- umi verify-commit $1
 ```
 
 ## version

@@ -291,10 +291,7 @@ $ umi mfsu remove --all
 比如在 `.husky/commit-msg` 做如下配置，
 
 ```bash
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-npx --no-install umi verify-commit $1
+npx --no -- umi verify-commit $1
 ```
 
 ## version

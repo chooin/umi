@@ -1,1 +1,1 @@
-npx --no-install max verify-commit $1
+npx --no -- max verify-commit $1

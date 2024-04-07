@@ -69,7 +69,7 @@ export default (api: IApi) => {
         writeFileSync(
           join(api.cwd, '.husky/commit-msg'),
           `
-npx --no-install ${cliName} verify-commit $1
+npx --no -- ${cliName} verify-commit $1
 `.trimStart(),
         );
         logger.info('Write commit-msg');
@@ -83,7 +83,7 @@ npx --no-install ${cliName} verify-commit $1
         writeFileSync(
           join(api.cwd, '.husky/pre-commit'),
           `
-npx --no-install lint-staged --quiet
+npx --no -- lint-staged --quiet
 `.trimStart(),
         );
         logger.info('Write pre-commit');
